@@ -4,533 +4,117 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="IronNest Pressure Washing provides residential and commercial exterior cleaning services in Palm Coast and surrounding North Florida areas." />
-  <meta name="theme-color" content="#0b1f33" />
+  <meta name="theme-color" content="#071522" />
   <title>IronNest Pressure Washing | Exterior Cleaning Services</title>
   <style>
     :root {
-      --navy: #0b1f33;
-      --navy-2: #102b45;
-      --blue: #2ba8ff;
-      --blue-dark: #0876c9;
-      --steel: #6f8395;
-      --mist: #edf7ff;
+      --navy: #071522;
+      --navy-2: #0b1f33;
+      --blue: #00a7ef;
+      --blue-dark: #0072bc;
+      --silver: #eef4f8;
       --white: #ffffff;
-      --ink: #152333;
-      --muted: #687888;
+      --ink: #132232;
+      --muted: #647586;
       --border: #dce8f2;
-      --shadow: 0 20px 55px rgba(11, 31, 51, 0.16);
+      --shadow: 0 22px 58px rgba(7, 21, 34, 0.2);
       --radius: 24px;
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: #f7fbff;
-      line-height: 1.6;
-    }
-
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: #f6fbff; line-height: 1.6; }
     a { color: inherit; text-decoration: none; }
-
     img { max-width: 100%; display: block; }
+    .container { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
 
-    .container {
-      width: min(1120px, calc(100% - 36px));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(220,232,242,0.85);
-    }
-
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      color: var(--navy);
-      letter-spacing: -0.02em;
-    }
-
-    .brand-mark {
-      width: 45px;
-      height: 45px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      color: var(--white);
-      background: linear-gradient(145deg, var(--navy), var(--blue-dark));
-      box-shadow: 0 12px 24px rgba(8,118,201,0.25);
-    }
-
-    .brand-mark svg {
-      width: 30px;
-      height: 30px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 4;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .brand span:last-child { font-size: 1.02rem; }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      font-weight: 700;
-      color: var(--navy);
-    }
-
+    .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.94); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(220,232,242,.9); }
+    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 900; color: var(--navy); }
+    .brand-logo { width: 185px; height: auto; }
+    .nav-links { display: flex; align-items: center; gap: 22px; font-weight: 800; color: var(--navy); }
     .nav-links a:not(.btn) { opacity: .82; }
     .nav-links a:not(.btn):hover { opacity: 1; color: var(--blue-dark); }
+    .nav-toggle { display: none; border: 0; background: var(--navy); color: white; border-radius: 12px; padding: 10px 12px; font-weight: 900; }
 
-    .nav-toggle {
-      display: none;
-      border: 0;
-      background: var(--navy);
-      color: var(--white);
-      border-radius: 12px;
-      padding: 10px 12px;
-      font-weight: 800;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border: 0;
-      border-radius: 999px;
-      padding: 13px 20px;
-      font-weight: 900;
-      cursor: pointer;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-    }
-
+    .btn { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 999px; padding: 13px 21px; font-weight: 950; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
     .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: white; background: linear-gradient(135deg, var(--blue), var(--blue-dark)); box-shadow: 0 16px 34px rgba(0,167,239,.28); }
+    .btn-dark { color: white; background: var(--navy); box-shadow: 0 16px 34px rgba(7,21,34,.22); }
+    .btn-light { color: var(--navy); background: white; border: 1px solid rgba(255,255,255,.7); }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
-      color: var(--white);
-      box-shadow: 0 16px 30px rgba(43,168,255,0.28);
-    }
-
-    .btn-dark {
-      background: var(--navy);
-      color: var(--white);
-      box-shadow: 0 16px 30px rgba(11,31,51,0.22);
-    }
-
-    .btn-light {
-      background: var(--white);
-      color: var(--navy);
-      border: 1px solid rgba(255,255,255,.55);
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      color: var(--white);
-      background:
-        radial-gradient(circle at 15% 15%, rgba(43,168,255,0.42), transparent 32%),
-        linear-gradient(135deg, rgba(11,31,51,.96), rgba(16,43,69,.95)),
-        url('https://images.unsplash.com/photo-1621271655478-5e7372dd174e?auto=format&fit=crop&w=1600&q=80') center/cover;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(11,31,51,.92), rgba(11,31,51,.68), rgba(11,31,51,.88));
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      min-height: 690px;
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      align-items: center;
-      gap: 42px;
-      padding: 88px 0;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin: 0 0 18px;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.2);
-      color: #d8f0ff;
-      font-weight: 900;
-      font-size: .88rem;
-    }
-
+    .hero { position: relative; overflow: hidden; color: white; background: radial-gradient(circle at 18% 16%, rgba(0,167,239,.38), transparent 34%), linear-gradient(135deg, rgba(7,21,34,.97), rgba(13,39,63,.96)); }
+    .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, rgba(255,255,255,.06) 0 1px, transparent 1px 18px); opacity: .3; }
+    .hero-inner { position: relative; z-index: 1; min-height: 700px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 44px; padding: 84px 0; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 18px; padding: 8px 13px; border-radius: 999px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); color: #d9f3ff; font-weight: 950; font-size: .88rem; }
     h1, h2, h3 { line-height: 1.08; margin: 0; }
-
-    h1 {
-      font-size: clamp(2.55rem, 6vw, 5.35rem);
-      letter-spacing: -0.065em;
-      max-width: 820px;
-    }
-
-    .hero p {
-      max-width: 680px;
-      margin: 22px 0 0;
-      font-size: clamp(1.05rem, 2vw, 1.24rem);
-      color: #d9eaf7;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 32px;
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 42px;
-      max-width: 650px;
-    }
-
-    .stat {
-      padding: 18px;
-      border-radius: 20px;
-      background: rgba(255,255,255,.11);
-      border: 1px solid rgba(255,255,255,.17);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.45rem;
-      color: var(--white);
-    }
-
-    .stat span { color: #c4d7e8; font-weight: 700; font-size: .92rem; }
-
-    .quote-card {
-      background: rgba(255,255,255,.96);
-      color: var(--ink);
-      border-radius: 28px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,.65);
-    }
-
+    h1 { font-size: clamp(2.55rem, 6vw, 5.25rem); letter-spacing: -.065em; max-width: 820px; }
+    .hero p { max-width: 680px; margin: 22px 0 0; font-size: clamp(1.05rem, 2vw, 1.24rem); color: #d9eaf7; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+    .hero-logo-card { background: rgba(255,255,255,.96); border-radius: 32px; padding: 34px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.65); }
+    .hero-logo { width: min(420px, 100%); margin: 0 auto 24px; }
+    .quote-card { background: white; color: var(--ink); border-radius: 28px; padding: 26px; border: 1px solid var(--border); }
     .quote-card h2 { color: var(--navy); font-size: 1.65rem; }
-    .quote-card p { color: var(--muted); margin: 10px 0 20px; font-size: .98rem; }
-
+    .quote-card p { color: var(--muted); margin: 10px 0 18px; font-size: .98rem; }
     .form-grid { display: grid; gap: 13px; }
-
-    label { display: grid; gap: 6px; font-weight: 800; color: var(--navy); }
-
-    input, select, textarea {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 13px 14px;
-      font: inherit;
-      color: var(--ink);
-      background: var(--white);
-      outline: none;
-    }
-
+    label { display: grid; gap: 6px; font-weight: 850; color: var(--navy); }
+    input, select, textarea { width: 100%; border: 1px solid var(--border); border-radius: 14px; padding: 13px 14px; font: inherit; color: var(--ink); background: white; outline: none; }
     textarea { min-height: 100px; resize: vertical; }
-
-    input:focus, select:focus, textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 4px rgba(43,168,255,.13);
-    }
+    input:focus, select:focus, textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(0,167,239,.14); }
 
     section { padding: 86px 0; }
-
-    .section-head {
-      max-width: 760px;
-      margin: 0 auto 42px;
-      text-align: center;
-    }
-
-    .section-head .kicker {
-      display: inline-block;
-      color: var(--blue-dark);
-      font-weight: 950;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      font-size: .79rem;
-      margin-bottom: 12px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      color: var(--navy);
-      letter-spacing: -0.045em;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      font-size: 1.08rem;
-      margin: 16px 0 0;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: 0 14px 34px rgba(11,31,51,.07);
-    }
-
-    .icon {
-      width: 52px;
-      height: 52px;
-      display: grid;
-      place-items: center;
-      border-radius: 16px;
-      background: var(--mist);
-      color: var(--blue-dark);
-      font-size: 1.6rem;
-      margin-bottom: 18px;
-    }
-
+    .section-head { max-width: 760px; margin: 0 auto 42px; text-align: center; }
+    .kicker { display: inline-block; color: var(--blue-dark); font-weight: 950; text-transform: uppercase; letter-spacing: .12em; font-size: .79rem; margin-bottom: 12px; }
+    .section-head h2 { font-size: clamp(2rem, 4vw, 3.2rem); color: var(--navy); letter-spacing: -.045em; }
+    .section-head p { color: var(--muted); font-size: 1.08rem; margin: 16px 0 0; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; box-shadow: 0 14px 34px rgba(7,21,34,.07); }
+    .icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; background: #e9f7ff; color: var(--blue-dark); font-size: 1.6rem; margin-bottom: 18px; }
     .card h3 { color: var(--navy); font-size: 1.35rem; }
     .card p { color: var(--muted); margin: 12px 0 0; }
 
-    .split {
-      display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 34px;
-      align-items: center;
-    }
+    .split { display: grid; grid-template-columns: .95fr 1.05fr; gap: 34px; align-items: center; }
+    .panel { background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: white; border-radius: 30px; padding: 36px; box-shadow: var(--shadow); }
+    .panel h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.045em; }
+    .panel p { color: #d3e4f1; }
+    .check-list { display: grid; gap: 12px; padding: 0; margin: 22px 0 0; list-style: none; }
+    .check-list li { display: flex; gap: 10px; align-items: flex-start; color: #eef9ff; font-weight: 750; }
+    .check-list li::before { content: "✓"; flex: 0 0 24px; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--blue); color: white; font-size: .85rem; font-weight: 950; margin-top: 1px; }
+    .before-after { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .photo-box { min-height: 310px; border-radius: 28px; padding: 22px; display: flex; align-items: flex-end; overflow: hidden; position: relative; background: linear-gradient(135deg, #d6e3ed, white); border: 1px solid var(--border); }
+    .photo-box.before { background: linear-gradient(135deg, #9ea69f, #d5d3ca); }
+    .photo-box.after { background: linear-gradient(135deg, #5fc9ff, #f7fcff); }
+    .photo-box::before { content: ""; position: absolute; inset: 30px; border-radius: 24px; border: 2px dashed rgba(7,21,34,.18); }
+    .photo-box span { position: relative; z-index: 1; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,.9); font-weight: 950; color: var(--navy); }
 
-    .panel {
-      background: var(--navy);
-      color: var(--white);
-      border-radius: 30px;
-      padding: 36px;
-      box-shadow: var(--shadow);
-    }
-
-    .panel h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      letter-spacing: -0.045em;
-    }
-
-    .panel p { color: #cfdeea; }
-
-    .check-list {
-      display: grid;
-      gap: 12px;
-      padding: 0;
-      margin: 22px 0 0;
-      list-style: none;
-    }
-
-    .check-list li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      color: #eaf7ff;
-      font-weight: 700;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      flex: 0 0 24px;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--blue);
-      color: var(--white);
-      font-size: .85rem;
-      font-weight: 950;
-      margin-top: 1px;
-    }
-
-    .before-after {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .photo-box {
-      min-height: 310px;
-      border-radius: 28px;
-      padding: 22px;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
-      position: relative;
-      background: linear-gradient(135deg, #d6e3ed, #ffffff);
-      border: 1px solid var(--border);
-    }
-
-    .photo-box.before { background: linear-gradient(135deg, #a3a69d, #d3d2c9); }
-    .photo-box.after { background: linear-gradient(135deg, #8bd1ff, #f7fcff); }
-
-    .photo-box::before {
-      content: "";
-      position: absolute;
-      inset: 30px;
-      border-radius: 24px;
-      border: 2px dashed rgba(11,31,51,.18);
-    }
-
-    .photo-box span {
-      position: relative;
-      z-index: 1;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.9);
-      font-weight: 950;
-      color: var(--navy);
-    }
-
-    .process {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      counter-reset: step;
-    }
-
-    .step {
-      counter-increment: step;
-      position: relative;
-    }
-
-    .step::before {
-      content: counter(step);
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: var(--navy);
-      color: var(--white);
-      font-weight: 950;
-      margin-bottom: 16px;
-    }
-
-    .cta {
-      padding: 76px 0;
-      background: linear-gradient(135deg, var(--navy), var(--navy-2));
-      color: var(--white);
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      letter-spacing: -0.055em;
-    }
-
-    .cta p {
-      max-width: 680px;
-      margin: 16px auto 28px;
-      color: #d7e7f3;
-    }
-
-    .footer {
-      background: #071522;
-      color: #c9d8e5;
-      padding: 34px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .footer strong { color: var(--white); }
-
-    .toast {
-      position: fixed;
-      left: 50%;
-      bottom: 24px;
-      transform: translateX(-50%) translateY(120px);
-      background: var(--navy);
-      color: var(--white);
-      padding: 14px 18px;
-      border-radius: 999px;
-      box-shadow: var(--shadow);
-      transition: transform .25s ease;
-      z-index: 50;
-      font-weight: 800;
-      text-align: center;
-    }
-
+    .process { background: white; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: step; }
+    .step { counter-increment: step; position: relative; }
+    .step::before { content: counter(step); width: 42px; height: 42px; display: grid; place-items: center; border-radius: 14px; background: var(--navy); color: white; font-weight: 950; margin-bottom: 16px; }
+    .cta { padding: 76px 0; background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: white; text-align: center; }
+    .cta h2 { font-size: clamp(2rem, 5vw, 3.4rem); letter-spacing: -.055em; }
+    .cta p { max-width: 680px; margin: 16px auto 28px; color: #d7e7f3; }
+    .footer { background: #040d15; color: #c9d8e5; padding: 34px 0; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; align-items: center; }
+    .footer strong { color: white; }
+    .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(120px); background: var(--navy); color: white; padding: 14px 18px; border-radius: 999px; box-shadow: var(--shadow); transition: transform .25s ease; z-index: 50; font-weight: 850; text-align: center; }
     .toast.show { transform: translateX(-50%) translateY(0); }
 
     @media (max-width: 900px) {
       .nav-toggle { display: inline-flex; }
-      .nav-links {
-        position: absolute;
-        left: 18px;
-        right: 18px;
-        top: 80px;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 18px;
-        border-radius: 22px;
-        background: var(--white);
-        box-shadow: var(--shadow);
-        border: 1px solid var(--border);
-      }
+      .nav-links { position: absolute; left: 18px; right: 18px; top: 86px; display: none; flex-direction: column; align-items: stretch; padding: 18px; border-radius: 22px; background: white; box-shadow: var(--shadow); border: 1px solid var(--border); }
       .nav-links.open { display: flex; }
       .hero-inner, .split { grid-template-columns: 1fr; }
-      .hero-inner { min-height: auto; padding: 64px 0; }
-      .quote-card { max-width: 620px; }
+      .hero-inner { min-height: auto; padding: 60px 0; }
       .service-grid { grid-template-columns: repeat(2, 1fr); }
       .steps { grid-template-columns: repeat(2, 1fr); }
     }
-
     @media (max-width: 640px) {
       .container { width: min(100% - 28px, 1120px); }
-      .brand span:last-child { font-size: .9rem; }
-      .hero-stats, .service-grid, .before-after, .steps { grid-template-columns: 1fr; }
+      .brand-logo { width: 148px; }
+      .hero-actions, .service-grid, .before-after, .steps { grid-template-columns: 1fr; }
       section { padding: 64px 0; }
-      .panel, .quote-card { padding: 24px; border-radius: 24px; }
+      .hero-logo-card, .quote-card, .panel { padding: 22px; border-radius: 24px; }
       .photo-box { min-height: 230px; }
     }
   </style>
@@ -539,15 +123,7 @@
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="IronNest Pressure Washing home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" role="img">
-            <path d="M32 4 56 16v16c0 15.3-9.6 24.3-24 28C17.6 56.3 8 47.3 8 32V16L32 4Z" />
-            <path d="M20 36c8 6 17 6 25 0" />
-            <path d="M18 29c9-8 19-8 28 0" />
-            <path d="M25 22c4-3 10-3 14 0" />
-          </svg>
-        </span>
-        <span>IronNest Pressure Washing</span>
+        <img class="brand-logo" data-logo alt="IronNest Pressure Washing logo" />
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
       <div class="nav-links" data-nav-links>
@@ -565,44 +141,35 @@
         <div>
           <p class="eyebrow">Palm Coast • Driveways • Homes • Commercial</p>
           <h1>Exterior cleaning built tough, done right.</h1>
-          <p>IronNest Pressure Washing helps restore curb appeal with reliable pressure washing and soft washing for homes, concrete, patios, fences, storefronts, and more.</p>
+          <p>IronNest Pressure Washing restores curb appeal with reliable pressure washing and soft washing for homes, concrete, patios, fences, storefronts, and more.</p>
           <div class="hero-actions">
             <a href="#quote" class="btn btn-primary">Request Free Quote</a>
             <a href="#services" class="btn btn-light">View Services</a>
           </div>
-          <div class="hero-stats" aria-label="Business highlights">
-            <div class="stat"><strong>Residential</strong><span>Homes, patios, fences</span></div>
-            <div class="stat"><strong>Commercial</strong><span>Storefronts and walkways</span></div>
-            <div class="stat"><strong>Local</strong><span>Palm Coast and nearby</span></div>
-          </div>
         </div>
-
-        <aside class="quote-card" id="quote" aria-label="Quote request form">
-          <h2>Get a free estimate</h2>
-          <p>Tell us what needs cleaning and we’ll follow up with pricing and next steps.</p>
-          <form class="form-grid" id="quoteForm">
-            <label>Name
-              <input name="name" autocomplete="name" required placeholder="Your name" />
-            </label>
-            <label>Phone or Email
-              <input name="contact" required placeholder="Best way to reach you" />
-            </label>
-            <label>Service Needed
-              <select name="service" required>
-                <option value="">Choose a service</option>
-                <option>House wash / soft wash</option>
-                <option>Driveway or concrete cleaning</option>
-                <option>Patio, pool deck, or pavers</option>
-                <option>Fence cleaning</option>
-                <option>Commercial cleaning</option>
-                <option>Not sure yet</option>
-              </select>
-            </label>
-            <label>Project Details
-              <textarea name="details" placeholder="Address, square footage, photos available, problem areas, timeline..."></textarea>
-            </label>
-            <button class="btn btn-dark" type="submit">Create Quote Email</button>
-          </form>
+        <aside class="hero-logo-card" id="quote" aria-label="Quote request form">
+          <img class="hero-logo" data-logo alt="IronNest Pressure Washing logo" />
+          <div class="quote-card">
+            <h2>Get a free estimate</h2>
+            <p>Tell us what needs cleaning and we’ll follow up with pricing and next steps.</p>
+            <form class="form-grid" id="quoteForm">
+              <label>Name <input name="name" autocomplete="name" required placeholder="Your name" /></label>
+              <label>Phone or Email <input name="contact" required placeholder="Best way to reach you" /></label>
+              <label>Service Needed
+                <select name="service" required>
+                  <option value="">Choose a service</option>
+                  <option>House wash / soft wash</option>
+                  <option>Driveway or concrete cleaning</option>
+                  <option>Patio, pool deck, or pavers</option>
+                  <option>Fence cleaning</option>
+                  <option>Commercial cleaning</option>
+                  <option>Not sure yet</option>
+                </select>
+              </label>
+              <label>Project Details <textarea name="details" placeholder="Address, square footage, photos available, problem areas, timeline..."></textarea></label>
+              <button class="btn btn-dark" type="submit">Create Quote Email</button>
+            </form>
+          </div>
         </aside>
       </div>
     </section>
@@ -612,15 +179,15 @@
         <div class="section-head">
           <span class="kicker">What we clean</span>
           <h2>Pressure washing and soft washing services.</h2>
-          <p>From dirty concrete to algae-stained siding, this site is set up to help turn visitors into quote requests.</p>
+          <p>Built around the services customers search for most: concrete, house washing, patios, fences, and small commercial jobs.</p>
         </div>
         <div class="service-grid">
-          <article class="card"><div class="icon">🏠</div><h3>House Washing</h3><p>Soft wash exterior cleaning for siding, soffits, gutters, and exterior surfaces that need a gentler approach.</p></article>
-          <article class="card"><div class="icon">🚗</div><h3>Driveways</h3><p>Concrete cleaning for driveways, sidewalks, garage aprons, and walkways with strong curb appeal impact.</p></article>
-          <article class="card"><div class="icon">🌴</div><h3>Patios & Pool Decks</h3><p>Refresh outdoor living areas, screened patios, pool decks, pavers, and entertainment spaces.</p></article>
-          <article class="card"><div class="icon">🪵</div><h3>Fences</h3><p>Remove built-up dirt, mildew, algae, and weathering from vinyl, wood, and privacy fencing.</p></article>
-          <article class="card"><div class="icon">🏢</div><h3>Commercial Cleaning</h3><p>Exterior cleaning for storefronts, offices, walkways, dumpster pads, and small business properties.</p></article>
-          <article class="card"><div class="icon">💧</div><h3>Custom Projects</h3><p>Have something specific? Send details and photos so we can quote the right method for the job.</p></article>
+          <article class="card"><div class="icon">🏠</div><h3>House Washing</h3><p>Soft wash exterior cleaning for siding, soffits, gutters, and delicate exterior surfaces.</p></article>
+          <article class="card"><div class="icon">🚗</div><h3>Driveways</h3><p>Concrete cleaning for driveways, sidewalks, garage aprons, and walkways.</p></article>
+          <article class="card"><div class="icon">🌴</div><h3>Patios & Pool Decks</h3><p>Refresh outdoor living areas, screened patios, pool decks, and pavers.</p></article>
+          <article class="card"><div class="icon">🪵</div><h3>Fences</h3><p>Remove built-up dirt, mildew, algae, and weathering from vinyl or wood fencing.</p></article>
+          <article class="card"><div class="icon">🏢</div><h3>Commercial Cleaning</h3><p>Exterior cleaning for storefronts, offices, walkways, and small business properties.</p></article>
+          <article class="card"><div class="icon">💧</div><h3>Custom Projects</h3><p>Send photos and details for anything specific that needs a custom quote.</p></article>
         </div>
       </div>
     </section>
@@ -631,10 +198,10 @@
           <h2>Make the outside look cared for again.</h2>
           <p>A clean exterior gives your property a sharper first impression and helps cut through dirt, algae, mildew, and grime.</p>
           <ul class="check-list">
-            <li>Quote-focused design for customers on mobile</li>
-            <li>Clear service sections for fast decision-making</li>
-            <li>Before and after area ready for your real job photos</li>
-            <li>Built for free hosting through GitHub Pages</li>
+            <li>Free estimates for local exterior cleaning jobs</li>
+            <li>Residential and small commercial service options</li>
+            <li>Before-and-after area ready for your real job photos</li>
+            <li>Mobile-friendly design for customers requesting quotes</li>
           </ul>
         </div>
         <div class="before-after">
@@ -649,13 +216,13 @@
         <div class="section-head">
           <span class="kicker">Simple process</span>
           <h2>From quote to clean in four steps.</h2>
-          <p>This section helps customers understand what happens after they reach out.</p>
+          <p>This makes it easy for customers to know what happens after they reach out.</p>
         </div>
         <div class="steps">
-          <article class="card step"><h3>Send Details</h3><p>Customer submits the form with contact info, service type, and project details.</p></article>
-          <article class="card step"><h3>Review Scope</h3><p>IronNest reviews surfaces, size, access, water availability, and any special concerns.</p></article>
-          <article class="card step"><h3>Confirm Quote</h3><p>Customer receives pricing and scheduling options before the work begins.</p></article>
-          <article class="card step"><h3>Clean & Finish</h3><p>The job gets completed with a clean walkthrough and final customer approval.</p></article>
+          <article class="card step"><h3>Send Details</h3><p>Submit contact info, service type, and project details.</p></article>
+          <article class="card step"><h3>Review Scope</h3><p>We review surfaces, size, access, water availability, and concerns.</p></article>
+          <article class="card step"><h3>Confirm Quote</h3><p>You receive pricing and scheduling options before work begins.</p></article>
+          <article class="card step"><h3>Clean & Finish</h3><p>The job gets completed with a clean walkthrough and final approval.</p></article>
         </div>
       </div>
     </section>
@@ -663,7 +230,7 @@
     <section class="cta">
       <div class="container">
         <h2>Ready to clean up the curb appeal?</h2>
-        <p>Use the quote form and send the project details. Add real phone, email, photos, and service area once you’re ready to launch officially.</p>
+        <p>Use the quote form and send the project details. Once you have your real business email, we can point the form directly there.</p>
         <a href="#quote" class="btn btn-primary">Start a Quote</a>
       </div>
     </section>
@@ -680,6 +247,22 @@
 
   <script>
     const BUSINESS_EMAIL = "quotes@ironnestpressurewashing.com";
+    const LOGO_PARTS = [
+      "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"
+    ];
+    const logoSrc = "data:image/webp;base64," + LOGO_PARTS.join("");
+    document.querySelectorAll("[data-logo]").forEach((img) => { img.src = logoSrc; });
+
     const navToggle = document.querySelector(".nav-toggle");
     const navLinks = document.querySelector("[data-nav-links]");
     const year = document.getElementById("year");
@@ -710,7 +293,6 @@
         `Service: ${data.get("service")}\n\n` +
         `Project Details:\n${data.get("details") || "No extra details provided."}`
       );
-
       toast.classList.add("show");
       setTimeout(() => toast.classList.remove("show"), 2200);
       window.location.href = `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${body}`;

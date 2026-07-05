@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alexthezero.github.io/ironnest-pressure-washing/sitemap.xml

@@ -1,0 +1,2 @@
+Force GitHub Pages rebuild for IronNest Pressure Washing site.
+Latest cleaned mobile layout is in index.html.

@@ -3,23 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="IronNest Pressure Washing provides residential and commercial exterior cleaning services in Palm Coast and surrounding North Florida areas." />
-  <meta name="theme-color" content="#071522" />
-  <title>IronNest Pressure Washing | Exterior Cleaning Services</title>
-  <link rel="stylesheet" href="style.css?v=clean2" />
+  <meta name="description" content="IronNest Pressure Washing provides pressure washing and soft washing for homes, driveways, patios, fences, and small commercial properties in Palm Coast and surrounding Flagler County." />
+  <meta name="theme-color" content="#061421" />
+  <meta property="og:title" content="IronNest Pressure Washing | Palm Coast Exterior Cleaning" />
+  <meta property="og:description" content="Palm Coast pressure washing built tough, done right. Free estimates for house washing, driveways, patios, fences, storefronts, and more." />
+  <meta property="og:type" content="website" />
+  <title>IronNest Pressure Washing | Palm Coast Exterior Cleaning</title>
+  <link rel="stylesheet" href="style.css?v=research1" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "name": "IronNest Pressure Washing",
+    "url": "https://alexthezero.github.io/ironnest-pressure-washing/",
+    "email": "quotes@ironnestpressurewashing.com",
+    "image": "https://alexthezero.github.io/ironnest-pressure-washing/assets/ironnest-logo.svg",
+    "logo": "https://alexthezero.github.io/ironnest-pressure-washing/assets/ironnest-logo.svg",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Palm Coast",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Palm Coast"},
+      {"@type": "AdministrativeArea", "name": "Flagler County"}
+    ],
+    "serviceType": [
+      "Pressure washing",
+      "Soft washing",
+      "House washing",
+      "Driveway cleaning",
+      "Patio cleaning",
+      "Fence cleaning",
+      "Commercial exterior cleaning"
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="IronNest Pressure Washing home">
-        <img class="brand-logo" src="assets/ironnest-logo.svg?v=6" alt="IronNest Pressure Washing logo" />
+        <img class="brand-logo" src="assets/ironnest-logo.svg?v=7" alt="IronNest Pressure Washing logo" />
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
-      <div class="nav-links" data-nav-links>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteMenu">Menu</button>
+      <div class="nav-links" id="siteMenu" data-nav-links>
         <a href="#services">Services</a>
         <a href="#results">Results</a>
-        <a href="#process">Process</a>
-        <a href="#quote" class="btn btn-primary">Get a Quote</a>
+        <a href="#why">Why Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#quote" class="btn btn-primary nav-cta">Free Estimate</a>
       </div>
     </nav>
   </header>
@@ -27,23 +62,34 @@
   <main>
     <section class="hero">
       <div class="hero-inner container">
-        <div>
-          <h1>Exterior cleaning built tough, done right.</h1>
-          <p>IronNest Pressure Washing restores curb appeal with reliable pressure washing and soft washing for homes, concrete, patios, fences, storefronts, and more.</p>
+        <div class="hero-copy">
+          <p class="eyebrow">Palm Coast • Flagler County • Residential & Commercial</p>
+          <h1>Palm Coast pressure washing built tough, done right.</h1>
+          <p class="subhead">House washing, driveway cleaning, patios, fences, and storefronts cleaned with the right pressure for each surface. Fast estimates. Clear communication. Curb appeal restored.</p>
           <div class="hero-actions">
-            <a href="#quote" class="btn btn-primary">Request Free Quote</a>
-            <a href="#services" class="btn btn-light">View Services</a>
+            <a href="#quote" class="btn btn-primary">Get Free Estimate</a>
+            <a href="#results" class="btn btn-light">See Results</a>
           </div>
+          <ul class="trust-strip" aria-label="IronNest trust signals">
+            <li><strong>Local</strong><span>Palm Coast based</span></li>
+            <li><strong>Free Estimates</strong><span>No-pressure quote process</span></li>
+            <li><strong>Surface-Safe</strong><span>Soft wash when needed</span></li>
+            <li><strong>Homes + Business</strong><span>Residential & small commercial</span></li>
+          </ul>
         </div>
+
         <aside class="quote-shell" id="quote" aria-label="Quote request form">
           <div class="quote-card">
-            <h2>Get a free estimate</h2>
-            <p>Tell us what needs cleaning and we’ll follow up with pricing and next steps.</p>
-            <form class="form-grid" id="quoteForm">
-              <label>Name <input name="name" autocomplete="name" required placeholder="Your name" /></label>
-              <label>Phone or Email <input name="contact" required placeholder="Best way to reach you" /></label>
-              <label>Service Needed
-                <select name="service" required>
+            <span class="form-kicker">Fast Quote Request</span>
+            <h2>Tell us what needs cleaning.</h2>
+            <p>Send the basics and we’ll follow up with pricing and next steps.</p>
+            <form class="form-grid" id="quoteForm" novalidate>
+              <label for="name">Name <span>required</span><input id="name" name="name" autocomplete="name" required placeholder="Your name" /></label>
+              <label for="phone">Mobile phone <span>required</span><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="Best phone number" /></label>
+              <label for="email">Email <span>optional</span><input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com" /></label>
+              <label for="address">Service address or ZIP <span>required</span><input id="address" name="address" autocomplete="street-address postal-code" required placeholder="Palm Coast address or ZIP" /></label>
+              <label for="service">Service needed <span>required</span>
+                <select id="service" name="service" required>
                   <option value="">Choose a service</option>
                   <option>House wash / soft wash</option>
                   <option>Driveway or concrete cleaning</option>
@@ -53,7 +99,8 @@
                   <option>Not sure yet</option>
                 </select>
               </label>
-              <label>Project Details <textarea name="details" placeholder="Address, square footage, photos available, problem areas, timeline..."></textarea></label>
+              <label for="details" class="full-field">Project details <span>optional</span><textarea id="details" name="details" placeholder="Tell us about algae, stains, square footage, access, timing, or anything else helpful."></textarea></label>
+              <p class="form-status" id="formStatus" aria-live="polite"></p>
               <button class="btn btn-dark" type="submit">Create Quote Email</button>
             </form>
           </div>
@@ -61,55 +108,80 @@
       </div>
     </section>
 
-    <section id="services">
+    <section class="proof-band" aria-label="Service confidence points">
+      <div class="container proof-grid">
+        <div><strong>Quick response</strong><span>Simple quote flow for local jobs</span></div>
+        <div><strong>Right method</strong><span>Pressure washing or soft washing based on the surface</span></div>
+        <div><strong>Clean finish</strong><span>Walkthrough-focused completion</span></div>
+      </div>
+    </section>
+
+    <section id="services" class="section light-section">
       <div class="container">
         <div class="section-head">
-          <span class="kicker">What we clean</span>
-          <h2>Pressure washing and soft washing services.</h2>
-          <p>Built around the services customers search for most: concrete, house washing, patios, fences, and small commercial jobs.</p>
+          <span class="kicker">Services</span>
+          <h2>Exterior cleaning services people actually search for.</h2>
+          <p>Clear service options make it easier for customers to know you handle their exact job.</p>
         </div>
         <div class="service-grid">
-          <article class="card"><div class="icon">🏠</div><h3>House Washing</h3><p>Soft wash exterior cleaning for siding, soffits, gutters, and delicate exterior surfaces.</p></article>
-          <article class="card"><div class="icon">🚗</div><h3>Driveways</h3><p>Concrete cleaning for driveways, sidewalks, garage aprons, and walkways.</p></article>
-          <article class="card"><div class="icon">🌴</div><h3>Patios & Pool Decks</h3><p>Refresh outdoor living areas, screened patios, pool decks, and pavers.</p></article>
-          <article class="card"><div class="icon">🪵</div><h3>Fences</h3><p>Remove built-up dirt, mildew, algae, and weathering from vinyl or wood fencing.</p></article>
-          <article class="card"><div class="icon">🏢</div><h3>Commercial Cleaning</h3><p>Exterior cleaning for storefronts, offices, walkways, and small business properties.</p></article>
-          <article class="card"><div class="icon">💧</div><h3>Custom Projects</h3><p>Send photos and details for anything specific that needs a custom quote.</p></article>
+          <article class="card service-card"><div class="icon">🏠</div><h3>House Washing</h3><p>Soft wash exterior cleaning for siding, soffits, gutters, and delicate exterior surfaces.</p><a href="#quote">Request house wash quote</a></article>
+          <article class="card service-card"><div class="icon">🚗</div><h3>Driveways</h3><p>Concrete cleaning for driveways, sidewalks, garage aprons, walkways, and curb appeal projects.</p><a href="#quote">Request driveway quote</a></article>
+          <article class="card service-card"><div class="icon">🌴</div><h3>Patios & Pool Decks</h3><p>Refresh outdoor living areas, screened patios, pool decks, and pavers.</p><a href="#quote">Request patio quote</a></article>
+          <article class="card service-card"><div class="icon">🪵</div><h3>Fences</h3><p>Remove built-up dirt, mildew, algae, and weathering from vinyl or wood fencing.</p><a href="#quote">Request fence quote</a></article>
+          <article class="card service-card"><div class="icon">🏢</div><h3>Commercial Cleaning</h3><p>Exterior cleaning for storefronts, offices, walkways, and small business properties.</p><a href="#quote">Request commercial quote</a></article>
+          <article class="card service-card"><div class="icon">💧</div><h3>Custom Projects</h3><p>Have something specific? Send photos and project details for a custom estimate.</p><a href="#quote">Start custom quote</a></article>
         </div>
       </div>
     </section>
 
-    <section id="results">
-      <div class="container split">
+    <section id="results" class="section dark-section">
+      <div class="container split results-split">
         <div class="panel">
-          <h2>Make the outside look cared for again.</h2>
-          <p>A clean exterior gives your property a sharper first impression and helps cut through dirt, algae, mildew, and grime.</p>
+          <span class="kicker light-kicker">Results</span>
+          <h2>Show the clean. Build trust fast.</h2>
+          <p>Pressure washing is visual. Real before-and-after photos should live here as soon as you have local jobs photographed.</p>
           <ul class="check-list">
-            <li>Free estimates for local exterior cleaning jobs</li>
-            <li>Residential and small commercial service options</li>
-            <li>Before-and-after area ready for your real job photos</li>
-            <li>Mobile-friendly design for customers requesting quotes</li>
+            <li>Add driveway, house wash, patio, and fence before/after photos</li>
+            <li>Use short captions with city, surface, and result</li>
+            <li>Keep photos real — no fake review counts or stock proof</li>
+            <li>Use this section as your highest-value trust builder</li>
           </ul>
         </div>
-        <div class="before-after">
-          <div class="photo-box before"><span>Before Photo Placeholder</span></div>
-          <div class="photo-box after"><span>After Photo Placeholder</span></div>
+        <div class="before-after" aria-label="Before and after gallery preview">
+          <div class="photo-box before"><span>Before photo slot</span></div>
+          <div class="photo-box after"><span>After photo slot</span></div>
         </div>
       </div>
     </section>
 
-    <section class="process" id="process">
+    <section class="section light-section" id="why">
       <div class="container">
         <div class="section-head">
-          <span class="kicker">Simple process</span>
-          <h2>From quote to clean in four steps.</h2>
-          <p>This makes it easy for customers to know what happens after they reach out.</p>
+          <span class="kicker">Why IronNest</span>
+          <h2>A tougher brand, a cleaner customer experience.</h2>
+          <p>The goal is simple: make it easy for someone to trust you, understand the service, and request a quote.</p>
         </div>
-        <div class="steps">
-          <article class="card step"><h3>Send Details</h3><p>Submit contact info, service type, and project details.</p></article>
-          <article class="card step"><h3>Review Scope</h3><p>We review surfaces, size, access, water availability, and concerns.</p></article>
-          <article class="card step"><h3>Confirm Quote</h3><p>You receive pricing and scheduling options before work begins.</p></article>
-          <article class="card step"><h3>Clean & Finish</h3><p>The job gets completed with a clean walkthrough and final approval.</p></article>
+        <div class="steps trust-cards">
+          <article class="card step"><h3>1. Send Details</h3><p>Customer sends service type, location, contact info, and project notes.</p></article>
+          <article class="card step"><h3>2. Review Surface</h3><p>We consider the surface, buildup, access, and whether pressure or soft washing is the right approach.</p></article>
+          <article class="card step"><h3>3. Confirm Quote</h3><p>Customer gets next steps before work begins. No confusing back-and-forth.</p></article>
+          <article class="card step"><h3>4. Clean & Finish</h3><p>The job gets completed with a clean finish and final walkthrough mindset.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-head left-head">
+          <span class="kicker">FAQ</span>
+          <h2>Common quote questions.</h2>
+          <p>Simple answers help customers feel ready to reach out.</p>
+        </div>
+        <div class="faq-grid">
+          <details open><summary>Do I need pressure washing or soft washing?</summary><p>It depends on the surface. Concrete can usually handle more pressure. Siding, trim, and delicate areas are better handled with a soft-wash approach.</p></details>
+          <details><summary>Can I get a quote from photos?</summary><p>Yes. Photos, approximate size, address or ZIP, and surface type can help with a faster estimate.</p></details>
+          <details><summary>What areas do you serve?</summary><p>IronNest is based around Palm Coast and surrounding Flagler County. Add more cities here only as your service area grows.</p></details>
+          <details><summary>Do you clean commercial properties?</summary><p>Yes. Small commercial storefronts, walkways, entry areas, and exterior surfaces can be quoted through the same form.</p></details>
         </div>
       </div>
     </section>
@@ -117,20 +189,25 @@
     <section class="cta">
       <div class="container">
         <h2>Ready to clean up the curb appeal?</h2>
-        <p>Use the quote form and send the project details. Once you have your real business email, we can point the form directly there.</p>
-        <a href="#quote" class="btn btn-primary">Start a Quote</a>
+        <p>Send the project details and get the estimate conversation started.</p>
+        <a href="#quote" class="btn btn-primary">Get Free Estimate</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-inner container">
-      <p><strong>IronNest Pressure Washing</strong><br />Palm Coast, Florida</p>
-      <p>© <span id="year"></span> IronNest Pressure Washing. All rights reserved.</p>
+      <p><strong>IronNest Pressure Washing</strong><br />Palm Coast, Florida<br /><a href="mailto:quotes@ironnestpressurewashing.com">quotes@ironnestpressurewashing.com</a></p>
+      <p>House washing • Driveways • Patios • Fences • Commercial<br />© <span id="year"></span> IronNest Pressure Washing. All rights reserved.</p>
     </div>
   </footer>
 
+  <div class="mobile-sticky-cta" aria-label="Quick actions">
+    <a class="btn btn-light" href="#services">Services</a>
+    <a class="btn btn-primary" href="#quote">Estimate</a>
+  </div>
+
   <div class="toast" id="toast" role="status" aria-live="polite">Opening your email app...</div>
-  <script src="script.js?v=clean2"></script>
+  <script src="script.js?v=research1"></script>
 </body>
 </html>
